@@ -33,7 +33,21 @@ explore: events {
     sql_on: ${events.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+
+  join: orders {
+    type: left_outer
+    sql_on: ${users.id} = ${orders.user_id} ;;
+    relationship: many_to_one
+  }
 }
+
+# explore: events {
+#   join: users {
+#     type: left_outer
+#     sql_on: ${events.user_id} = ${users.id} ;;
+#     relationship: many_to_one
+#   }
+# }
 
 explore: orders {
   join: users {
