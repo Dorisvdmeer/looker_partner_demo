@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "looker_partner_demo"
+connection: "looker_partner_demo_2"
 
 # include all the views
 include: "/views/**/*.view"
